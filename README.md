@@ -15,3 +15,5 @@
 - mapbox API
 - callbacks, arrow functions, destructuring
 - http request without library
+- html, css, public directory
+- hbs (views, templates)
