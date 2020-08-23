@@ -16,4 +16,7 @@
 - callbacks, arrow functions, destructuring
 - http request without library
 - html, css, public directory
+- express.js
 - hbs (views, templates)
+- query
+- fetch
