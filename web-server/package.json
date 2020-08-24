@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon src/app.js -e js,hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-setup": "pm2 deploy ecosystem.config.js production setup",
     "deploy-production": "pm2 deploy ecosystem.config.js production --force"
   },
   "author": "Yana Sidorova",
