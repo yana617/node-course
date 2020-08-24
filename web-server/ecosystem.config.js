@@ -1,5 +1,6 @@
 module.exports = {
   apps: [{
+    name: 'node-course',
     script: 'src/app.js',
     watch: './web-server'
   }],
