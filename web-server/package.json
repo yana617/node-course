@@ -4,10 +4,12 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon src/app.js -e js,hbs",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy-setup": "pm2 deploy ecosystem.config.js production setup",
-    "deploy-production": "pm2 deploy ecosystem.config.js production --force"
+    "deploy-production": "pm2 deploy ecosystem.config.js production --force",
+    "deploy": "npm run deploy-setup && npm run deploy-production"
   },
   "author": "Yana Sidorova",
   "license": "ISC",
