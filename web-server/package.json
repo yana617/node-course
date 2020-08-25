@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js -e js,hbs",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy-setup": "pm2 deploy ecosystem.config.js production setup",
     "deploy-production": "pm2 deploy ecosystem.config.js production --force",
     "deploy": "npm run deploy-setup && npm run deploy-production"
@@ -18,5 +17,8 @@
     "hbs": "^4.1.1",
     "pm2-deploy": "^1.0.2",
     "postman-request": "^2.88.1-postman.24"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

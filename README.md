@@ -20,3 +20,5 @@
 - hbs (views, templates)
 - query
 - fetch
+- git & heroku
+- **pm2 (deploy & run)**
