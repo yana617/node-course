@@ -70,8 +70,15 @@ npm run deploy // deploy to the server
 ### How to run
 
 ```bash
+npm run dev
 ```
 
 ### Modules & features
 
 - mongodb ([CRUD](../master/task-manager/mongodb-CRUD.md))
+- promises
+- mongoose
+- validator
+- async/await
+- express get,post,patch,delete with mongoose
+- express router

@@ -59,7 +59,7 @@ db.collection('users')
 - **.findOne()**
 - **.find()**
 
-#### Example
+#### Example for read
 
 ```javascript
 db.collection('users')
@@ -80,7 +80,7 @@ db.collection('users')
 - **.updateOne()**
 - **.updateMany()**
 
-#### Example
+#### Example for update
 
 ```javascript
 db.collection('users')
@@ -106,7 +106,7 @@ db.collection('users')
 - **.deleteOne()**
 - **.deleteMany()**
 
-#### Example
+#### Example for delete
 
 ```javascript
 db.collection('users')
