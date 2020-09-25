@@ -77,8 +77,11 @@ npm run dev
 
 - mongodb ([CRUD](../master/task-manager/mongodb-CRUD.md))
 - promises
-- mongoose
+- mongoose (find*, populate, virtual&methods&pre&statics)
 - validator
 - async/await
 - express get,post,patch,delete with mongoose
 - express router
+- bcrypt
+- jsonwebtoken (jwt)
+- middleware

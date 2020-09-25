@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const git = require('./user');
 const taskRouter = require('./task');
+const userRouter = require('./user');
 
 router.use('/users', userRouter);
 router.use('/tasks', taskRouter);
