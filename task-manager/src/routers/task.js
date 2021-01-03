@@ -20,10 +20,33 @@ router.post('/', auth, async (req, res) => {
   }
 });
 
+// GET /tasks?completed=true
+// GET /tasks?limit=5&skip=0
+// GET /tasks?sortBy=createdAt:asc
 router.get('/', auth, async (req, res) => {
+  const { completed, limit, skip, sortBy } = req.query;
+  const match = {};
+  const sort = {};
+
+  if (completed) {
+    match.completed = completed === 'true';
+  }
+  if (sortBy) {
+    const parts = sortBy.split(':');
+    sort[parts[0]] = parts[1] === 'desc' ? -1 : 1;
+  }
+
   try {
     const { user } = req;
-    await user.populate('tasks').execPopulate();
+    await user.populate({
+      path: 'tasks',
+      match,
+      options: {
+        limit: parseInt(limit),
+        skip: parseInt(skip),
+        sort,
+      }
+    }).execPopulate();
     res.send(user.tasks);
   } catch (e) {
     res.status(500).send({ error: e.message });
@@ -65,7 +88,7 @@ router.patch('/:id', auth, async (req, res) => {
 
     updates.forEach((update) => task[update] = updatedTask[update]);
     await task.save();
-    
+
     res.send(task);
   } catch (e) {
     res.status(400).send({ error: e.message });

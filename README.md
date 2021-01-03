@@ -85,3 +85,6 @@ npm run dev
 - bcrypt
 - jsonwebtoken (jwt)
 - middleware
+- sorting, pagination, filtering
+- multer
+- sharp

@@ -11,6 +11,9 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  avatar: {
+    type: mongoose.SchemaTypes.Buffer,
+  },
   email: {
     type: String,
     unique: true,
@@ -49,6 +52,8 @@ const userSchema = new mongoose.Schema({
       required: true,
     }
   }]
+}, {
+  timestamps: true,
 });
 
 userSchema.virtual('tasks', {
@@ -64,6 +69,7 @@ userSchema.methods.toJSON = function () {
   delete userObject.password;
   delete userObject.tokens;
   delete userObject.__v;
+  delete userObject.avatar;
 
   return userObject;
 };
