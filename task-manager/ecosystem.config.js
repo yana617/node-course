@@ -4,7 +4,6 @@ module.exports = {
     script: 'src/index.js',
     watch: './task-manager'
   }],
-
   deploy: {
     production: {
       user: 'root',
@@ -13,7 +12,7 @@ module.exports = {
       repo: 'git@github.com:yana617/node-course.git',
       path: '/var/www/node-course',
       'pre-deploy-local': '',
-      'post-deploy': 'cd task-manager && npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy': 'cd task-manager && npm install && pm2 reload ecosystem.config.js production',
       'pre-setup': 'rm -rf /var/www/node-course/'
     }
   }

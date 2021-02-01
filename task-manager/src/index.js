@@ -1,6 +1,8 @@
 const express = require('express');
 const chalk = require('chalk');
 
+require('dotenv').config();
+
 require('./db/mongoose');
 
 const app = express();
