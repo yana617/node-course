@@ -4,7 +4,7 @@ const chalk = require('chalk');
 require('./db/mongoose');
 
 const app = express();
-const port = process.env.PORT || 8889;
+const port = process.env.PORT;
 
 app.use(express.json());
 

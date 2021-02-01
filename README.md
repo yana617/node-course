@@ -69,7 +69,10 @@ npm run deploy // deploy to the server
 
 ### How to run
 
+Create **dev.env** file in config/ directory and setup values from **env.example** file.
+
 ```bash
+npm install
 npm run dev
 ```
 
@@ -88,3 +91,5 @@ npm run dev
 - sorting, pagination, filtering
 - multer
 - sharp
+- sendGrid email service
+- mongodb Atlas & compass
