@@ -93,3 +93,6 @@ npm run dev
 - sharp
 - sendGrid email service
 - mongodb Atlas & compass
+- jest testing
+- expect & beforeEach & \_\_mocks__
+- supertest

@@ -1,16 +1,7 @@
-const express = require('express');
 const chalk = require('chalk');
 
-require('dotenv').config();
-
-require('./db/mongoose');
-
-const app = express();
+const app = require('./app');
 const port = process.env.PORT;
-
-app.use(express.json());
-
-app.use(require('./routers'));
 
 app.listen(port, () => {
   console.log(chalk.green.bold(`[INFO] Server started on post ${port}!`));

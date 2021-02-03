@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/me', async (req, res) => {
+router.get('/me', auth, async (req, res) => {
   res.send(req.user);
 });
 
@@ -33,7 +33,7 @@ router.patch('/me', auth, async (req, res) => {
     const isValidOperation = updates.every(key => allowedUpdates.includes(key));
 
     if (!isValidOperation) {
-      return res.status(404).send({ error: 'Invalid updates!' });
+      return res.status(400).send({ error: 'Invalid updates!' });
     }
 
     const { user } = req;
