@@ -18,6 +18,7 @@ module.exports = {
     "io": "readonly",
     "Mustache": "readonly",
     "moment": "readonly",
+    "Qs": "readonly",
   },
   "parserOptions": {
     "ecmaVersion": 2018

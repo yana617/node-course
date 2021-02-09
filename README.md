@@ -114,4 +114,6 @@ npm run dev
   - server&client side
   - io, socket, broadcast
   - acknowledgements
+  - rooms
+  - join
 - mdn Geolocation
