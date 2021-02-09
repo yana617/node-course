@@ -96,3 +96,22 @@ npm run dev
 - jest testing
 - expect & beforeEach & \_\_mocks__
 - supertest
+
+## Chat App
+
+### How to run
+
+Create **dev.env** file in config/ directory and setup values from **example.env** file.
+
+```bash
+npm install
+npm run dev
+```
+
+### Modules & features
+
+- socket.io
+  - server&client side
+  - io, socket, broadcast
+  - acknowledgements
+- mdn Geolocation
